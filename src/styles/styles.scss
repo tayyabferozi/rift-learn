@@ -1,0 +1,29 @@
+@import "./colors";
+@import "./utilities";
+
+#navbar {
+  background-color: $color5;
+  padding: 2rem;
+
+  .page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 75px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .toggler {
+      margin-left: 2rem;
+    }
+  }
+}
