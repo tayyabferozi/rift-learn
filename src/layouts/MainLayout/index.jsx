@@ -1,11 +1,12 @@
 import React from "react";
-import Navbar from "./Navbar";
+
+import Header from "./Header";
 
 const MainLayout = ({ children }) => {
   return (
     <div id="main-layout">
-      <Navbar />
-      <div className="main-body">{children}</div>
+      <Header />
+      <div id="main-body">{children}</div>
     </div>
   );
 };
