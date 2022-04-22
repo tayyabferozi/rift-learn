@@ -31,10 +31,21 @@ const Learn = () => {
           </div>
 
           <p>
-            Rift Learn is the best place to get up to speed on what and how NFTs
-            work or learn about Crypto with easy to read, straight to the point
-            guides on all you'll need to know. To start, select either NFT or
-            Crypto.
+            {btnState !== "nft" ? (
+              <>
+                Rift Learn is the best place to get up to speed on what and how
+                NFTs work or learn about Crypto with easy to read, straight to
+                the point guides on all you'll need to know. To start, select
+                either NFT or Crypto.
+              </>
+            ) : (
+              <>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reprehenderit a placeat rerum dolorem hic optio, saepe magnam
+                nulla mollitia neque voluptate maiores corporis praesentium ad
+                velit? Sunt neque architecto eum.
+              </>
+            )}
           </p>
         </div>
       </Section>

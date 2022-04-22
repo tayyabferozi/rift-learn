@@ -9,7 +9,7 @@ const MiniLayout = ({ children }) => {
     <div id="min-layout">
       <Section id="header">
         <div className="back" onClick={() => navigate(-1)}>
-          &lt;
+          <img width={30} src="/assets/imgs/back.png" alt="back" />
         </div>
         <Link className="logo" to="/">
           <span className="name">RIFT</span>{" "}

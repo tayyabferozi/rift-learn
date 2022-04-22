@@ -11,7 +11,7 @@ const Landing = () => {
       <Section id="boxes">
         <GridContainer>
           <div className="col-md-6">
-            <Link to="/learn" className="box box-1"></Link>
+            <div className="box box-1"></div>
           </div>
           <div className="col-md-6">
             <div className="row g-4 second">
@@ -19,10 +19,10 @@ const Landing = () => {
                 <Link to="/learn" className="box box-2"></Link>
               </div>
               <div className="col-sm-6">
-                <Link to="/learn" className="box box-3"></Link>
+                <div className="box box-3"></div>
               </div>
               <div className="col-sm-6">
-                <Link to="/learn" className="box box-4"></Link>
+                <div className="box box-4"></div>
               </div>
             </div>
           </div>

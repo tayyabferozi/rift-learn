@@ -106,10 +106,6 @@
 
     @extend %transitioned;
 
-    &:hover {
-      transform: scale(1.025);
-    }
-
     &.box-1 {
       @media screen and (min-width: 768px) {
         aspect-ratio: 1 / 1;
@@ -123,6 +119,12 @@
     &.box-3,
     &.box-4 {
       background-color: $color3;
+    }
+
+    &.box-2 {
+      &:hover {
+        transform: scale(1.025);
+      }
     }
   }
 
@@ -145,6 +147,8 @@
 
 #learn {
   height: 100vh;
+
+  @extend %transitioned;
 
   &.crypto {
     background-color: #e394a1;
