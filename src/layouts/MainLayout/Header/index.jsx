@@ -1,10 +1,13 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import clsx from "clsx";
 
 import { GlobalContext } from "../../../context/GlobalState";
 import { changeIsDarkMode } from "../../../context/actions";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const {
     state: { isDarkMode },
     dispatch,
@@ -24,13 +27,29 @@ const Navbar = () => {
     }
   }, [isDarkMode]);
 
+  const toggleMenuHandler = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
+
   return (
     <div id="header" className="section">
       <div className="page-container">
-        <div className="logo">
+        <Link to="/" className="logo">
           <span className="name">RIFT</span>
+        </Link>
+        <div className="menu d-sm-none" onClick={toggleMenuHandler}>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div className="nav">
+        <div
+          className={clsx(isMenuOpen && "open", "nav")}
+          onClick={toggleMenuHandler}
+        >
+          <div className="close d-sm-none">&times;</div>
+          <Link to="/" className="d-sm-none">
+            <div className="logo">RIFT</div>
+          </Link>
           <Link to="#0">About</Link>
           <Link to="#0">Programs</Link>
           <Link to="#0">Blog</Link>
