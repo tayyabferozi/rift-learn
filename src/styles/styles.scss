@@ -11,6 +11,7 @@
     right: 0;
     background-color: $color5;
     height: 152px;
+    z-index: 5;
 
     @extend %transitioned;
 
@@ -142,6 +143,16 @@
 // ****************************************************************************************************************************************
 
 #learn {
+  height: 100vh;
+
+  &.crypto {
+    background-color: #e394a1;
+  }
+
+  &.nft {
+    background-color: #9ebff8;
+  }
+
   .learn-main {
     max-width: 500px;
     margin-left: auto;
