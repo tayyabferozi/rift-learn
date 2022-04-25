@@ -8,8 +8,6 @@ import MiniLayout from "../../layouts/MiniLayout";
 const Learn = () => {
   const [btnState, setBtnState] = useState();
 
-  console.log(btnState);
-
   return (
     <MiniLayout>
       <Section
